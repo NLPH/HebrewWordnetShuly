@@ -8,9 +8,12 @@ Project description
 -------------------
 
 **Objective:** To create a Hebrew WordNet, aligned with the Princeton English WordNet.
+
 **Researchers:** In Haifa, Noam Ordan, Iris Eyal and Shuly Wintner (and, in the past, Margalit Zabludowski). This project is joint with a team at the TCC Division ITC-IRST, Trento, Italy.
-**Status:** Complete
-**Funding:** Israeli Ministry of Science and Technology, as part of the Knowledge Center for Hebrew Language Telecommunication
+
+**Status:** Complete.
+
+**Funding:** Israeli Ministry of Science and Technology, as part of the Knowledge Center for Hebrew Language Telecommunication.
 
 
 Abstract
