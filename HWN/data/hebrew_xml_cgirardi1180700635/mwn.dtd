@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Document type Definition for the xml distribution of MultiWordNet -->
+
+<!ELEMENT multiwordnet (synsets)>
+  <!ATTLIST multiwordnet
+       language CDATA #REQUIRED
+       version CDATA #REQUIRED
+       id_version CDATA #REQUIRED>
+
+<!ELEMENT synsets (synset+)>
+
+<!ELEMENT synset (gloss?, domains?, sumo?, synonyms+, semantic_rels*, lexical_rels*)>
+ <!ATTLIST synset
+       id CDATA #REQUIRED
+       pos CDATA #REQUIRED
+       status CDATA #IMPLIED>
+
+<!ELEMENT gloss (#PCDATA)>
+<!ELEMENT domains (#PCDATA)>
+<!ELEMENT sumo (#PCDATA)>
+<!ATTLIST sumo
+       type CDATA #IMPLIED>
+
+<!ELEMENT synonyms (lemma+)>
+ <!ATTLIST synonyms
+       belongs (synset|phrase) "synset">
+
+<!ELEMENT lemma (#PCDATA)>
+ <!ATTLIST lemma
+       sense CDATA #IMPLIED>
+
+<!ELEMENT semantic_rels (relation+)>
+<!ELEMENT lexical_rels (relation+)>
+
+<!ELEMENT relation (source_lemma?, target_lemma?)>
+ <!ATTLIST relation
+ type CDATA #REQUIRED
+ target_id CDATA #REQUIRED
+ pos CDATA #REQUIRED>
+
+<!ELEMENT source_lemma (#PCDATA)>
+<!ELEMENT target_lemma (#PCDATA)>
+

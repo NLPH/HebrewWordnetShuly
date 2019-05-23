@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Document type Definition for the export of the MWN synonym and morphological cards -->
+
+<!ELEMENT multiwordnet (synsets, morpho?)>
+  <!ATTLIST multiwordnet
+       language CDATA #REQUIRED
+       version CDATA #REQUIRED
+       id_version CDATA #REQUIRED>
+
+<!ELEMENT synsets (synset+)>
+
+<!ELEMENT synset (synonym+)>
+ <!ATTLIST synset
+       id CDATA #REQUIRED
+       pos CDATA #REQUIRED
+       status CDATA #IMPLIED>
+
+<!ELEMENT synonym (lemma, dictinfo?, teqs?, ex?, comment?, history?)>
+ <!ATTLIST synonym
+       num CDATA #REQUIRED
+       ev CDATA #IMPLIED
+       idmorpho CDATA #IMPLIED
+       uso CDATA #IMPLIED
+       stat CDATA #IMPLIED
+       tgr CDATA #IMPLIED
+       modify CDATA #IMPLIED>
+
+<!ELEMENT dictinfo (gloss?)>
+ <!ATTLIST dictinfo
+        bidict CDATA #IMPLIED
+	bisense CDATA #IMPLIED
+	monodict CDATA #IMPLIED
+	monosense CDATA #IMPLIED>
+
+<!ELEMENT gloss (#PCDATA)>
+
+<!ELEMENT teqs (#PCDATA)>
+
+<!ELEMENT ex (#PCDATA)>
+
+<!ELEMENT comment (#PCDATA)>
+
+<!ELEMENT history (#PCDATA)>
+
+<!ELEMENT lemma (#PCDATA)>
+
+<!ELEMENT morpho (morphocard+)>
+
+
+<!ELEMENT morphocard (lemma, undotted?, dotted_without_dots?, variants?, translit_dotted?, translit_undotted?, irregular_forms?, pronunciation?, miscellanea?)>
+ <!ATTLIST morphocard
+       id CDATA #REQUIRED
+       pos CDATA #REQUIRED>
+
+<!ELEMENT irregular_forms (#PCDATA)>
+
+<!ELEMENT pronunciation (#PCDATA)>
+
+<!ELEMENT miscellanea (#PCDATA)>
+
+<!-- Hebrew elements only -->
+<!ELEMENT undotted (#PCDATA)>
+<!ELEMENT dotted_without_dots (#PCDATA)>
+<!ELEMENT variants (#PCDATA)>
+<!ELEMENT translit_dotted (#PCDATA)>
+<!ELEMENT translit_undotted (#PCDATA)>
+
